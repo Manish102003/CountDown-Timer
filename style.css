@@ -16,6 +16,7 @@ body {
     background: url("https://images.unsplash.com/photo-1637216099315-a413cf383e9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     font-size: 1.6rem;
 }
 
@@ -52,7 +53,6 @@ h1 {
 }
 
 .rainbow {
-    height:100vh;
     margin: 0;
     --border-size: .7rem;
     border: var(--border-size) solid transparent;
@@ -61,8 +61,13 @@ h1 {
             #fbb300 90deg 180deg,
             #377af5 180deg 270deg,
             #399953 270deg 360deg) 1 stretch;
-    background: rgb(255 255 255 / var(--opacity));
 }
+
+@media only screen and (min-width:626px) {
+    body {
+      height:100vh;
+    }
+  }
 
 @supports (background: paint(houdini)) {
     @property --angle {
